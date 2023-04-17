@@ -1,8 +1,9 @@
-import { products } from "./constants/data.js";
+// import { products } from "./constants/data.js";
+import { newproducts } from "./constants/newproducts.js"
 import Product from "./model/product.schema.js";
 const DefaultData = async () => {
   try {
-    await Product.insertMany(products);
+    await Product.insertMany(newproducts);
 
     console.log(`Data inserted successfully`);
   } catch (error) {
