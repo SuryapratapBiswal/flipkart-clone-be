@@ -8,6 +8,13 @@ export const getProducts = async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 }
+export const addProduct = async (req, res) => {
+    try {
+      
+    } catch (error) {
+        
+    }
+}
 export const getProductById = async (req, res) => {
     try {
         const id = req.params.id

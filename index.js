@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import Connection from "./database/db.js";
-import DefaultData from "./default.js";
+// import DefaultData from "./default.js";
 import Router from "./routes/route.js";
 import cors from "cors";
 
@@ -24,4 +24,4 @@ app.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`);
 });
 
-DefaultData();
+// DefaultData();
