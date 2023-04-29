@@ -1,8 +1,9 @@
 import express from "express";
 
 import { userSignup, userLogin ,getAllUsers} from "../controller/user-controller.js";
-import { addPaymentGateway } from "../controller/payment-controller.js";
+import { addPaymentGateway, cardDetails } from "../controller/payment-controller.js";
 import { getProducts,getProductById,addProduct} from "../controller/products-controller.js";
+import { orderComplete, getOrderByUser } from "../controller/order-controller.js";
 const router = express.Router();
 
 router.post("/signup", userSignup);
@@ -14,5 +15,8 @@ router.post('/addProduct', addProduct)
 router.get('/product/:id', getProductById);
 
 router.post('/payment',addPaymentGateway);
+router.post('/payment2',cardDetails);
+router.post('/order_complete',orderComplete);
+router.post('/orderbyuser',getOrderByUser);
 
 export default router;

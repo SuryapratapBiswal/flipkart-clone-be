@@ -10,9 +10,9 @@ export const getProducts = async (req, res) => {
 }
 export const addProduct = async (req, res) => {
     try {
-        const { feedback, details, price, quantity, category, title, img, id } = req.body
+        const { id,img,title,category,price,quantity,details,feedback } = req.body
         const result = await Product.create({
-            id, img, title, category, price, quantity, details, feedback
+            id,img,title,category,price,quantity,details,feedback
         })
         res.send(result)
 
