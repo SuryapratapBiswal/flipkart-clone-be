@@ -12,7 +12,7 @@ export const addPaymentGateway = async (req, res) => {
 const { order_id,amount,payment_capture,currency } = req.body;
 
 const options={
-    amount:amount,
+    amount:amount *100,
     currency:currency,
     receipt:order_id,
     payment_capture:payment_capture
